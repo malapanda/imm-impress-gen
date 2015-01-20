@@ -13,6 +13,8 @@ import beans.Product;
 
 public class MindMapGeneratorTest {
 	
+	File templateFolder  = new File(new File("src", "test"), "resources");
+	
 	MindMap map;
 	MindMapGenerator generator;
 	
@@ -45,8 +47,9 @@ public class MindMapGeneratorTest {
 				};
 			}
 		};
-		
-		generator = new MindMapGenerator();
+	
+	
+		generator = new MindMapGenerator("test.ftl", templateFolder);
 		
 	}
 	
@@ -62,7 +65,7 @@ public class MindMapGeneratorTest {
 	
 	@Test
 	public void testGeneration3() throws IOException, TemplateException {
-		generator = new MindMapGenerator("panda_templ.ftl");
+		generator = new MindMapGenerator("panda_templ.ftl", templateFolder);
 		generator.generateToStdout(map);
 	}
 
