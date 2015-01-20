@@ -1,7 +1,9 @@
-package utils;
+package beans;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import utils.IdGenerator;
 
 import beans.Content;
 import beans.Coordinates;
@@ -18,7 +20,7 @@ public class SimpleNode implements MapNode {
 	private Coordinates coordinates;
 	private Rotation rotation;
 	private Content content;
-	private Integer scale;
+	private Scale scale;
 	
 	private List<MapNode> children = new LinkedList<>();
 	
@@ -42,12 +44,12 @@ public class SimpleNode implements MapNode {
 
 	@Override
 	public Coordinates getCoordinates() {
-		return coordinates == null ? new EmptyCoordinates() : coordinates;
+		return coordinates == null ? new Coordinates(0,0,0) : coordinates;
 	}
 
 	@Override
 	public Rotation getRotation() {
-		return rotation == null ? new EmptyRotation() : rotation;
+		return rotation == null ? new Rotation(0,0,0) : rotation;
 	}
 
 	@Override
@@ -56,8 +58,8 @@ public class SimpleNode implements MapNode {
 	}
 
 	@Override
-	public Integer getScale() {
-		return scale == null ? 1 : scale;
+	public Scale getScale() {
+		return scale == null ? new Scale(1) : scale;
 	}
 
 	public void addChild(SimpleNode child) {
@@ -77,13 +79,18 @@ public class SimpleNode implements MapNode {
 		this.content = content;
 	}
 
-	public void setScale(Integer scale) {
+	public void setScale(Scale scale) {
 		this.scale = scale;
 	}
 
 	@Override
 	public List<MapNode> getChildren() {
 		return children;
+	}
+	
+	@Override
+	public String toString() {
+		return content.getText().toString();
 	}
 
 }

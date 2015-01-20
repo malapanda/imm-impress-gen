@@ -16,6 +16,6 @@ public interface MapNode {
 	
 	public Content getContent();
 	
-	public Integer getScale();
+	public Scale getScale();
 	
 }

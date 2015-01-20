@@ -1,4 +1,4 @@
-package utils;
+package beans;
 
 import beans.Content;
 import beans.Image;
