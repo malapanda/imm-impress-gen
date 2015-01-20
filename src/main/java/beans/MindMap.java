@@ -1,8 +1,9 @@
 package beans;
 
-public interface MindMap {
-	
-	public String getUser();
+import java.util.List;
 
-	public Product getLatestProduct();
+public interface MindMap {
+
+	public List<MapNode> getNodesInOrder();
+	
 }

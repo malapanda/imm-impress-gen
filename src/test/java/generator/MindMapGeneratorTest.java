@@ -1,72 +1,33 @@
 package generator;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
-import org.junit.Before;
 import org.junit.Test;
 
+import beans.MapNode;
+import beans.MindMap;
+import cases.SimpleCase;
 import freemarker.template.TemplateException;
 
-import beans.MindMap;
-import beans.Product;
+public class MindMapGeneratorTest extends GeneratorTest {
+	
 
-public class MindMapGeneratorTest {
-	
-	File templateFolder  = new File(new File("src", "test"), "resources");
-	
-	MindMap map;
-	MindMapGenerator generator;
-	
-	@Before
-	public void before() throws IOException {
-			map = new MindMap() {
-			
+	@Test
+	public void testSth() throws IOException, TemplateException {
+		MindMapGenerator generator = forTestTemplate("test_impress.ftl");		
+		MindMap map = new MindMap() {
 			@Override
-			public String getUser() {
-				// TODO Auto-generated method stub
-				return "rysiek";
-			}
-			
-			@Override
-			public Product getLatestProduct() {
-				// TODO Auto-generated method stub
-				return new Product() {
-					
-					@Override
-					public String getUrl() {
-						// TODO Auto-generated method stub
-						return "url";
-					}
-					
-					@Override
-					public String getName() {
-						// TODO Auto-generated method stub
-						return "name";
-					}
-				};
+			public List<MapNode> getNodesInOrder() {
+				return genStruct();
 			}
 		};
-	
-	
-		generator = new MindMapGenerator("test.ftl", templateFolder);
-		
-	}
-	
-	@Test
-	public void testGeneration() throws IOException, TemplateException {
 		generator.generateToStdout(map);
 	}
 	
-	@Test
-	public void testGeneration2() throws IOException, TemplateException {
-		generator.generateToFile(new File("panda.html"), map);
-	}
-	
-	@Test
-	public void testGeneration3() throws IOException, TemplateException {
-		generator = new MindMapGenerator("panda_templ.ftl", templateFolder);
-		generator.generateToStdout(map);
-	}
 
+	private List<MapNode> genStruct() {
+		return new SimpleCase().genStruct();
+	}
+	
 }
