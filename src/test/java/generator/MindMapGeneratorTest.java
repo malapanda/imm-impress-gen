@@ -27,7 +27,7 @@ public class MindMapGeneratorTest extends GeneratorTest {
 	
 
 	private List<MapNode> genStruct() {
-		return new SimpleCase().genStruct();
+		return new SimpleCase().genDfsStruct();
 	}
 	
 }
