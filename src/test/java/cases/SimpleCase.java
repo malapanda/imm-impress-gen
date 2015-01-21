@@ -73,7 +73,7 @@ public class SimpleCase {
 
 		n111 = new SimpleNode();
 		n111.setContent(new TextContent("111"));
-		n111.setCoordinates(new Coordinates(-1400, 700, -90));
+		n111.setCoordinates(new Coordinates(-1300, 620, -85));
 		n111.setScale(new Scale(0.5));
 		n111.setRotation(new Rotation(-45, 0, 0));
 
@@ -82,8 +82,8 @@ public class SimpleCase {
 		n21 = new SimpleNode();
 		n21.setContent(new TextContent("21"));
 		n21.setCoordinates(new Coordinates(0, 500, -75));
-		n21.setScale(new Scale(0.5));
-		n21.setRotation(new Rotation(-45, 0, 0));
+		n21.setScale(new Scale(1));
+		n21.setRotation(new Rotation(-30, 0, 0));
 
 		n2.addChild(n21);
 	}

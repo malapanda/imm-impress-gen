@@ -20,5 +20,10 @@ public class TextContent implements Content {
 	public Image getImage() {
 		return null;
 	}
+	
+	@Override
+	public String toString() {
+		return getText();
+	}
 
 }

@@ -64,7 +64,7 @@ public class SimpleNode implements MapNode {
 
 	public void addChild(SimpleNode child) {
 		children.add(child);		
-		child.parent = child;
+		child.parent = this;
 	}
 
 	public void setCoordinates(Coordinates coordinates) {
