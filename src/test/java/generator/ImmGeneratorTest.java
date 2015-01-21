@@ -19,15 +19,10 @@ public class ImmGeneratorTest extends GeneratorTest {
 		MindMap map = new MindMap() {
 			@Override
 			public List<MapNode> getNodesInOrder() {
-				return genStruct();
+				return new SimpleCase().genBfsStruct();
 			}
 		};
 		generator.generateToFile(new File("test.html"),map);
-	}
-	
-
-	private List<MapNode> genStruct() {
-		return new SimpleCase().genBfsStruct();
 	}
 	
 }
