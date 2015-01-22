@@ -1,28 +1,24 @@
-package beans;
+package impress.beans;
 
-import java.util.LinkedList;
+import impress.utils.IdGenerator;
+
+import java.util.ArrayList;
 import java.util.List;
 
-import utils.IdGenerator;
-
-import beans.Content;
-import beans.Coordinates;
-import beans.MapNode;
-import beans.Rotation;
 
 public class SimpleNode implements MapNode {
 
-	private static final IdGenerator idGen = new IdGenerator(); 
+	protected static final IdGenerator idGen = new IdGenerator(); 
 	
-	private final String id;
+	protected final String id;
 	
-	private MapNode parent;
-	private Coordinates coordinates;
-	private Rotation rotation;
-	private Content content;
-	private Scale scale;
+	protected MapNode parent;
+	protected Coordinates coordinates;
+	protected Rotation rotation;
+	protected Content content;
+	protected Scale scale;
 	
-	private List<MapNode> children = new LinkedList<>();
+	protected List<MapNode> children = new ArrayList<>();
 	
 	public SimpleNode() {
 		this(idGen.nextId());  
@@ -82,7 +78,7 @@ public class SimpleNode implements MapNode {
 	public void setScale(Scale scale) {
 		this.scale = scale;
 	}
-
+	
 	@Override
 	public List<MapNode> getChildren() {
 		return children;
@@ -90,7 +86,7 @@ public class SimpleNode implements MapNode {
 	
 	@Override
 	public String toString() {
-		return content.getText().toString();
+		return getContent().getText().toString();
 	}
 
 }

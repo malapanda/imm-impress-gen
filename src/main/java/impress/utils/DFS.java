@@ -1,9 +1,10 @@
-package utils;
+package impress.utils;
+
+import impress.beans.MapNode;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import beans.MapNode;
 
 public class DFS {
 

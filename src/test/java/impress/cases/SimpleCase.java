@@ -1,14 +1,15 @@
-package cases;
+package impress.cases;
+
+import impress.beans.Coordinates;
+import impress.beans.MapNode;
+import impress.beans.Rotation;
+import impress.beans.Scale;
+import impress.beans.SimpleNode;
+import impress.beans.TextContent;
 
 import java.util.Arrays;
 import java.util.List;
 
-import beans.Coordinates;
-import beans.MapNode;
-import beans.Rotation;
-import beans.Scale;
-import beans.SimpleNode;
-import beans.TextContent;
 
 public class SimpleCase {
 	

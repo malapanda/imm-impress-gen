@@ -1,7 +1,7 @@
-package beans;
+package impress.beans;
 
-import beans.Content;
-import beans.Image;
+import impress.beans.Content;
+import impress.beans.Image;
 
 public class TextContent implements Content {
 

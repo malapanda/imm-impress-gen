@@ -1,13 +1,15 @@
-package generator;
+package impress.generator;
+
+import impress.beans.MapNode;
+import impress.beans.MindMap;
+import impress.cases.SimpleCase;
+import impress.generator.MindMapGenerator;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.junit.Test;
 
-import beans.MapNode;
-import beans.MindMap;
-import cases.SimpleCase;
 import freemarker.template.TemplateException;
 
 public class MindMapGeneratorTest extends GeneratorTest {

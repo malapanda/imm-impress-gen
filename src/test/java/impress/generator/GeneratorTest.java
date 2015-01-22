@@ -1,4 +1,6 @@
-package generator;
+package impress.generator;
+
+import impress.generator.MindMapGenerator;
 
 import java.io.File;
 import java.io.IOException;

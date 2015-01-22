@@ -1,4 +1,4 @@
-package utils;
+package impress.utils;
 
 public class IdGenerator {
 	
