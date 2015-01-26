@@ -1,4 +1,4 @@
-package impress.beans;
+package imm.impress.beans;
 
 import java.util.List;
 

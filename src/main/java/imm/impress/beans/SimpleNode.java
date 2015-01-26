@@ -1,6 +1,6 @@
-package impress.beans;
+package imm.impress.beans;
 
-import impress.utils.IdGenerator;
+import imm.impress.utils.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,17 +8,18 @@ import java.util.List;
 
 public class SimpleNode implements MapNode {
 
-	protected static final IdGenerator idGen = new IdGenerator(); 
+	private static final IdGenerator idGen = new IdGenerator(); 
 	
-	protected final String id;
+	private final String id;
 	
-	protected MapNode parent;
-	protected Coordinates coordinates;
-	protected Rotation rotation;
-	protected Content content;
-	protected Scale scale;
+	private MapNode parent;
+	private Coordinates coordinates;
+	private Rotation rotation;
+	private Content content;
+	private Scale scale;
+	private NodeColor color;
 	
-	protected List<MapNode> children = new ArrayList<>();
+	private List<MapNode> children = new ArrayList<MapNode>();
 	
 	public SimpleNode() {
 		this(idGen.nextId());  
@@ -50,12 +51,17 @@ public class SimpleNode implements MapNode {
 
 	@Override
 	public Content getContent() {
-		return content == null ? new TextContent("") : content;
+		return content == null ? new Content("") : content;
 	}
 
 	@Override
 	public Scale getScale() {
 		return scale == null ? new Scale(1) : scale;
+	}
+	
+	@Override
+	public NodeColor getColor() {
+		return color;
 	}
 
 	public void addChild(SimpleNode child) {
@@ -79,6 +85,10 @@ public class SimpleNode implements MapNode {
 		this.scale = scale;
 	}
 	
+	public void setColor(NodeColor color) {
+		this.color = color;
+	}
+
 	@Override
 	public List<MapNode> getChildren() {
 		return children;

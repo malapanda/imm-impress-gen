@@ -1,6 +1,6 @@
-package impress.utils;
+package imm.impress.utils;
 
-import impress.beans.MapNode;
+import imm.impress.beans.MapNode;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DFS {
 
-	private List<MapNode> nodes = new LinkedList<>();
+	private List<MapNode> nodes = new LinkedList<MapNode>();
 	
 	public DFS(MapNode root) {
 		visit(root);

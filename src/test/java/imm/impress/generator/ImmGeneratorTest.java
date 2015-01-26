@@ -1,9 +1,9 @@
-package impress.generator;
+package imm.impress.generator;
 
-import impress.beans.MapNode;
-import impress.beans.MindMap;
-import impress.cases.SimpleCase;
-import impress.generator.MindMapGenerator;
+import imm.impress.beans.MapNode;
+import imm.impress.beans.MindMap;
+import imm.impress.cases.SimpleCase;
+import imm.impress.generator.MindMapGenerator;
 
 import java.io.File;
 import java.io.IOException;

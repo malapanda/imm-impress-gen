@@ -1,4 +1,4 @@
-package impress.beans;
+package imm.impress.beans;
 
 import java.util.List;
 
@@ -17,5 +17,7 @@ public interface MapNode {
 	public Content getContent();
 	
 	public Scale getScale();
+	
+	public NodeColor getColor();
 	
 }

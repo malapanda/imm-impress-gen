@@ -1,6 +1,6 @@
-package impress.generator;
+package imm.impress.generator;
 
-import impress.beans.MindMap;
+import imm.impress.beans.MindMap;
 
 import java.io.File;
 import java.io.IOException;
