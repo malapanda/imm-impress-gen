@@ -5,15 +5,18 @@ import imm.impress.beans.Image;
 public class Content {
 
 	private String text;
+	private String notes;
+
 	private Image image;
 
 	public Content(String text) {
-		this(text, null);
+		this(text, null, null);
 	}
 	
-	public Content(String text, Image image) {
+	public Content(String text, String notes, Image image) {
 		this.text = text;
 		this.image = image;
+		this.notes = notes;
 	}
 	
 	public String getText() {
@@ -22,6 +25,10 @@ public class Content {
 
 	public Image getImage() {
 		return image;
+	}
+
+	public String getNotes() {
+		return notes;
 	}
 	
 	@Override
